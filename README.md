@@ -17,4 +17,9 @@ if (!string.IsNullOrWhiteSpace(port))
 }
 ```
 
-Many thanks to [Habr user S0ren](https://habr.com/ru/post/450904/) and [Stack Overflow users Andrzej Gis and Duu82](https://stackoverflow.com/questions/59434242/asp-net-core-gives-system-net-sockets-socketexception-error-on-heroku).
+# References
+
+- HABR: [Practicalities of deploying dockerized ASP.NET Core application to Heroku](https://habr.com/ru/post/450904/)
+
+- Stack Overflow: [ASP .NET Core gives System.Net.Sockets.SocketException error on Heroku](https://stackoverflow.com/questions/59434242/asp-net-core-gives-system-net-sockets-socketexception-error-on-heroku)
+
