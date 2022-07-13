@@ -14,10 +14,16 @@ builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
+string? port = Environment.GetEnvironmentVariable("PORT");
+if (!string.IsNullOrWhiteSpace(port))
+{
+    app.Urls.Add("http://*:" + port);
+}
+
 app.UseSwagger();
 app.UseSwaggerUI(c =>
 {
-    c.SwaggerEndpoint("/swagger/v1/swagger.json", "My service");
+    c.SwaggerEndpoint("/swagger/v1/swagger.json", "ASP.NET Core Web API hosted on Heroku");
     c.RoutePrefix = string.Empty;
 });
 
