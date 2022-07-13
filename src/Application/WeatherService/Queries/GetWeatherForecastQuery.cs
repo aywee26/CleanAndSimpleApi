@@ -26,7 +26,7 @@ public record GetWeatherForecastQuery : IRequest<IEnumerable<WeatherForecast>>
             var result = Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
                 Date = DateTime.Now.AddDays(index),
-                TemperatureC = Random.Shared.Next(),
+                TemperatureC = Random.Shared.Next(-20, 30),
                 Summary = Summaries[Random.Shared.Next(Summaries.Length)]
             }).ToArray();
             return result;
