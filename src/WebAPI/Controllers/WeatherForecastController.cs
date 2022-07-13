@@ -17,9 +17,9 @@ namespace WebAPI.Controllers
         }
 
         [HttpGet("GetWeatherForecast")]
-        public async Task<ActionResult<IEnumerable<WeatherForecast>>> Get(GetWeatherForecast request)
+        public async Task<ActionResult<IEnumerable<WeatherForecast>>> Get()
         {
-            var result = await _mediator.Send(request);
+            var result = await _mediator.Send(new GetWeatherForecastQuery());
             return Ok(result);
         }
     }

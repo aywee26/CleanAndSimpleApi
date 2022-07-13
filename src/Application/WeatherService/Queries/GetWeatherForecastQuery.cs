@@ -3,9 +3,9 @@ using MediatR;
 
 namespace Application.WeatherService.Queries;
 
-public record GetWeatherForecast() : IRequest<IEnumerable<WeatherForecast>>
+public record GetWeatherForecastQuery : IRequest<IEnumerable<WeatherForecast>>
 {
-    public class Handler : IRequestHandler<GetWeatherForecast, IEnumerable<WeatherForecast>>
+    public class Handler : IRequestHandler<GetWeatherForecastQuery, IEnumerable<WeatherForecast>>
     {
         private static readonly string[] Summaries = new[]
         {
@@ -21,7 +21,7 @@ public record GetWeatherForecast() : IRequest<IEnumerable<WeatherForecast>>
             "Scorching"
         };
 
-        public async Task<IEnumerable<WeatherForecast>> Handle(GetWeatherForecast request, CancellationToken cancellationToken)
+        public async Task<IEnumerable<WeatherForecast>> Handle(GetWeatherForecastQuery request, CancellationToken cancellationToken)
         {
             var result = Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
