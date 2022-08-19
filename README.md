@@ -17,9 +17,18 @@ if (!string.IsNullOrWhiteSpace(port))
 }
 ```
 
+# Easy deployment with GitHub Actions
+
+1. Go to ```Settings``` -> ```Secrets```.
+2. Set up following secrets: ```HEROKU_API_KEY```, ```HEROKU_APP_NAME```, ```HEROKU_EMAIL```.
+3. Create a workflow. Use [heroku-deploy](https://github.com/marketplace/actions/deploy-to-heroku), supply secrets and set ```usedocker``` flag to true.
+
 # References
 
 - HABR: [Practicalities of deploying dockerized ASP.NET Core application to Heroku](https://habr.com/ru/post/450904/)
 
 - Stack Overflow: [ASP .NET Core gives System.Net.Sockets.SocketException error on Heroku](https://stackoverflow.com/questions/59434242/asp-net-core-gives-system-net-sockets-socketexception-error-on-heroku)
+
+- C# Corner: [Deploy A .NET API To Heroku Through GitHub Actions
+](https://www.c-sharpcorner.com/article/deploy-a-net-api-to-heroku-through-github-actions/)
 
