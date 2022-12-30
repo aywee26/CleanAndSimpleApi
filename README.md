@@ -2,7 +2,7 @@
 
 Basically, I took ASP.NET Core Web API template, reworked it into Clean Architecture project, and made it work with Heroku.
 
-And it is live! [Check it out!](https://clean-and-simple-api.herokuapp.com/index.html)
+On November 28th, 2022, Salesforce stopped providing free Heroku services. The project is no longer hosted.
 
 # Making it work with Heroku
 
@@ -29,6 +29,5 @@ if (!string.IsNullOrWhiteSpace(port))
 
 - Stack Overflow: [ASP .NET Core gives System.Net.Sockets.SocketException error on Heroku](https://stackoverflow.com/questions/59434242/asp-net-core-gives-system-net-sockets-socketexception-error-on-heroku)
 
-- C# Corner: [Deploy A .NET API To Heroku Through GitHub Actions
-](https://www.c-sharpcorner.com/article/deploy-a-net-api-to-heroku-through-github-actions/)
+- C# Corner: [Deploy A .NET API To Heroku Through GitHub Actions](https://www.c-sharpcorner.com/article/deploy-a-net-api-to-heroku-through-github-actions/)
 
